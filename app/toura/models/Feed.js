@@ -218,14 +218,14 @@ dojo.declare('toura.models.FeedItem', null, {
     } else {
       enc = item.enclosure || item.content;
     }
-    
+
     if (!enc) { return ''; }
-    
-    if (!dojo.isObject(enc) && enc.match(/(jpeg|jpg|png)/i)) {
+
+    if (!dojo.isObject(enc) && enc.match(/(jpeg|jpg|png|gif)/i)) {
       return { url : enc };
     }
 
-    if (enc && enc.type && enc.type.match(/(jpeg|png)/i)) {
+    if (enc && enc.type && enc.type.match(/(jpeg|jpg|png|gif)/i)) {
       return { url : enc.url };
     }
 
