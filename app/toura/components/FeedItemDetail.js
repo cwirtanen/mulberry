@@ -18,6 +18,19 @@ dojo.declare('toura.components.FeedItemDetail', mulberry._Component, {
       });
       // don't show an image in the main display
       this.item.image = false;
+    },
+
+    'application/x-mpegURL' : function(item) {
+      this.videoPlayer.show();
+
+      if (this.device.os === 'ios'){
+        this.videoPlayer.set('media', {
+          'url' : item.media.url,
+          'poster' : item.image.url
+        });
+        // don't show an image in the main display
+        this.item.image = false;
+      }
     }
   },
 
