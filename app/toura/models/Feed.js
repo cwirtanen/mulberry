@@ -127,8 +127,6 @@ dojo.declare('toura.models.Feed', null, {
   },
 
   _get : function() {
-    console.log("ID");
-    console.log(this.id);
     this.entries = dojo.map(
       mulberry.app.DeviceStorage.get(this.id) || [],
       function(item) {
