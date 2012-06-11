@@ -1,0 +1,14 @@
+checklist:
+  type: node
+  screens:
+    - name: index
+      regions:
+        - className: page-nav
+          components:
+            - PageNav
+        - scrollable: true
+          className: checklist
+          components:
+            - PageHeaderImage
+            - BodyText
+            - Checklist

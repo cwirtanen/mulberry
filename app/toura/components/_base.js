@@ -7,6 +7,7 @@ dojo.require('toura.components.AudioCaption');
 dojo.require('toura.components.AudioList');
 dojo.require('toura.components.AudioPlayer');
 dojo.require('toura.components.BodyText');
+dojo.require('toura.components.Checklist');
 dojo.require('toura.components.ChildNodeGrid');
 dojo.require('toura.components.ChildNodes');
 dojo.require('toura.components.ChildNodeText');

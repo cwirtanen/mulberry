@@ -1,0 +1,71 @@
+.page.checklist {
+  .screen {
+    @include standard-screen;
+  }
+
+  .component.checklist {
+
+    @include background-shadow;
+
+    li {
+      @include flex-column-container;
+  
+      line-height: 22px;
+      border-bottom: 1px solid $border-color;
+      min-height: 40px;
+      vertical-align: middle;
+
+      div.check {
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+        border: 1px solid black;
+      }
+
+      a {
+        padding-top: 15px;
+        color: $text-color;
+        @include flex-column-container;
+        vertical-align: middle;
+        -webkit-box-flex: 1;
+        margin-right: 10px;
+
+        .img {
+          width: 67px;
+          height: 50px;
+          -webkit-background-size: cover;
+          background: no-repeat center center;
+          margin-right: 10px;
+
+          &.default {
+            background-image: url(resources/icons/icon-favorite.png);
+            -webkit-background-size: 67px 50px;
+          }
+        }
+
+        .text {
+          -webkit-box-flex: 1;
+
+          h2 {
+            font-weight: normal;
+          }
+
+          p {
+            font-size: 0.9em;
+            font-style: italic;
+          }
+        }
+
+      }
+
+      .delete {
+        width: 30px;
+      }
+    }
+    li.checked {
+      div.check {
+        background-color: red;
+      }
+    }
+  }
+}

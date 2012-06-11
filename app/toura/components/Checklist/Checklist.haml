@@ -1,0 +1,5 @@
+%ul.component.checklist
+  :each i in datalist
+    %li{ class : i.checked, itemid : i.id }
+      %div{ class : "check" }
+      %a{ href : '#/node/' + i.id }= i.name
